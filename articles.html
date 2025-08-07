@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Articles | Quantum Reasearch Brief</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="articles-page">
+ <!-- ====== Header ====== -->
+<header>
+  <div class="header-container container">
+    <!-- Logo on far left -->
+    <a href="index.html" class="site-logo">
+      <img src="data/img/logoQRB-right.png" alt="Quantum Research Brief Logo">
+    </a>
+
+    <!-- Navigation center-left -->
+    <nav class="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="articles.html">Articles</a>
+      <a href="trivia.html" class="active">Trivia</a>
+      <a href="about.html">About</a>
+      <!--  <a href="contact.html">Contact</a> -->
+    </nav>
+
+    <!-- Search bar far right -->
+    <form class="search-bar" action="articles.html" method="get">
+      <input type="text" name="search" placeholder="Search articles..." />
+      <button type="submit">Search</button>
+    </form>
+  </div>
+</header>
+
+  <main class="container">
+    <section class="search-summary">
+      <h2 id="search-title">All Articles</h2>
+    </section>
+
+    <!-- Filter + Sort Controls -->
+    <section class="controls">
+      <div class="sort">
+        <label for="sort-select">Sort by:</label>
+        <select id="sort-select">
+          <option value="newest">Newest First</option>
+          <option value="oldest">Oldest First</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- Article Results -->
+    <section id="articles-list" class="article-cards">
+      <!-- Articles will be inserted here via JS -->
+    </section>
+   
+  </main>
+
+  <footer class="container">
+    <p>&copy; 2025 Quantum Reasearch Brief. All rights reserved.</p>
+  </footer>
+
+  <script src="js/articles-page.js"></script>
+</body>
+</html>

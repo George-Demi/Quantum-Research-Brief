@@ -1,0 +1,3 @@
+<a href="img/schemeCorrelatedHoppingTopology.png" target="_blank">
+  <img class="centered-image" src="data/img/schemeCorrelatedHoppingTopology.png" alt="Hamiltonian Figure">
+</a>

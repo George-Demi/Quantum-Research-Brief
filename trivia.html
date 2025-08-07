@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trivia Game | Quantum Research Brief</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<!-- ====== Header ====== -->
+<header>
+  <div class="header-container container">
+    <!-- Logo on far left -->
+    <a href="index.html" class="site-logo">
+      <img src="data/img/logoQRB-right.png" alt="Quantum Research Brief Logo">
+    </a>
+
+    <!-- Navigation center-left -->
+    <nav class="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="articles.html">Articles</a>
+      <a href="trivia.html" class="active">Trivia</a>
+      <a href="about.html">About</a>
+      <!--  <a href="contact.html">Contact</a> -->
+    </nav>
+
+    <!-- Search bar far right -->
+    <form class="search-bar" action="articles.html" method="get">
+      <input type="text" name="search" placeholder="Search articles..." />
+      <button type="submit">Search</button>
+    </form>
+  </div>
+</header>
+
+  <main class="container" id="trivia-game">
+    <h2>Trivia Game</h2>
+    <h3>Test your knowledge of quantum mechanics and computing!</h3>
+    <div id="question-container"></div>
+    <div id="options-container"></div>
+    <div id="feedback"></div>
+    <button id="next-btn" style="display:none;">Next</button>
+    <div id="score-container" style="margin-top: 20px;"></div>
+  </main>
+
+  <script src="js/questions.js"></script>
+  <script src="js/trivia.js"></script>
+
+  <footer class="container">
+    <p>&copy; 2025 Quantum Reasearch Brief. All rights reserved.</p>
+  </footer>
+</body>
+</html>

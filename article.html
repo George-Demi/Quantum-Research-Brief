@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Article | Quantum Research Brief</title>
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- ✅ MathJax Configuration -->
+  <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true
+    }
+  };
+</script>
+
+  <!-- ✅ MathJax CDN -->
+  <script id="MathJax-script" async 
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head>
+
+<body>
+ <!-- ====== Header ====== -->
+<header>
+  <div class="header-container container">
+    <!-- Logo on far left -->
+    <a href="index.html" class="site-logo">
+      <img src="data/img/logoQRB-right.png" alt="Quantum Research Brief Logo">
+    </a>
+
+    <!-- Navigation center-left -->
+    <nav class="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="articles.html">Articles</a>
+      <a href="trivia.html" class="active">Trivia</a>
+      <a href="about.html">About</a>
+     
+    </nav>
+
+    <!-- Search bar far right -->
+    <form class="search-bar" action="articles.html" method="get">
+      <input type="text" name="search" placeholder="Search articles..." />
+      <button type="submit">Search</button>
+    </form>
+  </div>
+</header>
+
+  <main class="container">
+    <article id="full-article">
+      <h2 id="article-title">Loading...</h2>
+      <div class="meta">
+        <!--<span id="article-author"></span> • -->
+        <span id="article-date"></span>   
+      </div>
+      <img id="article-image" alt="Article Image" />
+      <section id="article-content"></section>
+      
+    </article>
+  </main>
+
+  <footer class="container">
+    <p>&copy; 2025 Quantum Reaserch Brief. All rights reserved.</p>
+  </footer>
+
+  <!-- ✅ JS for loading article content -->
+  <script src="js/article-loader.js"></script>
+
+  <!-- ✅ marked.js for Markdown rendering -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</body>
+</html>

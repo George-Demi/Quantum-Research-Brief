@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quantum Research Brief</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<!-- ====== Header ====== -->
+<header>
+  <div class="header-container container">
+    <!-- Logo on far left -->
+    <a href="index.html" class="site-logo">
+      <img src="data/img/logoQRB-right.png" alt="Quantum Research Brief Logo">
+    </a>
+
+    <!-- Navigation center-left -->
+    <nav class="nav-menu">
+      <a href="index.html" class = "acitve">Home</a>
+      <a href="articles.html">Articles</a>
+      <a href="trivia.html">Trivia</a>
+      <a href="about.html">About</a>
+      <!--  <a href="contact.html">Contact</a> -->
+    </nav>
+
+    <!-- Search bar far right -->
+    <form class="search-bar" action="articles.html" method="get">
+      <input type="text" name="search" placeholder="Search articles..." />
+      <button type="submit">Search</button>
+    </form>
+  </div>
+</header>
+
+
+  <!-- ====== Main Content ====== -->
+  <main>
+    <section id="mission" class="container">
+      <h2>Our Mission</h2>
+      <p>
+         <strong>  At Quantum Research Brief, we help you stay up to date with the latest advances in quantum research by providing concise 5–7 minute summaries of the most recent papers in the field.  </strong>
+      </p>
+    </section>
+
+    
+
+    <!--  Latest Articles -->
+    <section class="featured-articles container">
+      <h2>Latest Articles</h2>
+      <div class="article-cards" id="latest-articles">
+        <p>Loading latest articles...</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====== Footer ====== -->
+  <footer class="container">
+    <p>&copy; 2025 Quantum Reasearch Brief. All rights reserved.</p>
+  </footer>
+
+  <!-- ====== External Script ====== -->
+  <script src="js/index-loader.js"></script>
+</body>
+</html>

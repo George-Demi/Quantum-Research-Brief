@@ -1,0 +1,86 @@
+[
+{"id": 1,
+"title": "Making Random Number Generation a Traceable Process",
+"author": "NA",
+"date": "2025-07-14",
+"summary": "Kavuri et al. propose a device-independent protocol that generates verifiable random numbers using non-local quantum correlations and traceable hash chains.",
+"contentPath": "data/content/TraceableRNG.md",
+"image":"data/img/quantum1.jpeg"
+} , 
+
+{
+"id": 2 ,
+"title": "Sequential quantum computing: A new paradigm which divides and conquer",
+"summary": "A hybrid quantum optimization scheme combines quantum annealing and superconducting qubits to accelerate and refine solutions using counterdiabatic techniques.",
+"author": "NA",
+"date": "2025-07-16",
+"tags": ["quantum"],
+"contentPath": "data/content/SequencialQC.md",
+"image" : "",
+"views":0 
+},
+
+{
+"id": 3,
+"title": "Certifying transmission of quantum messages in untrusted and lossy channels",
+"summary": "A new protocol by Neves et al. certifies quantum communication channels under minimal device trust, even in the presence of losses, using generalized diamond fidelity and entangled photons.",
+"author": "NA",
+"date": "2025-07-18",
+"tags": ["", ""],
+"contentPath": "data/content/LossyChannelCertification.md",
+"image" : "",
+"views":0
+},
+
+{
+"id": 4 ,
+"title": "A New Rydberg Scheme For Fast Entangling Gates",
+"summary": "A fast, robust Rydberg entangling gate leverages resonant dipole-dipole interactions and microwave-optimized control to outperform traditional blockade-based schemes.",
+"author": "",
+"date": "2025-07-21",
+"tags": ["", ""],
+"contentPath": "data/content/NewEntanglingRydberg.md",
+"image" : "data/img/schemeNewEntanglingRydberg.png",
+"hideImage": true,
+"views":0
+},
+
+{
+"id": 5 ,
+"title": "Floquet frequency modulation for controlled Rydberg interactions",
+"summary": "A Floquet-modulated Rydberg scheme enables stable two-qubit gates by overcoming anti-blockade challenges without requiring individual atom addressing.",
+"author": "NA",
+"date": "2025-07-23",
+"tags": [""],
+"contentPath": "data/content/FFMRydberg.md",
+"image" : "data/img/schemeFFMRydberg.png",
+"hideImage": true,
+"views":0
+},
+
+
+{
+"id": 6 ,
+"title": "Effectively describing strongly attractive 1D fermions",
+"summary": "An effective theory maps strongly attractive spin-1/2 fermions to dimers and unpaired fermions, enabling tractable solutions via perturbation.",
+"author": "",
+"date": "2025-07-25",
+"tags": ["", ""],
+"contentPath": "data/content/EffectiveAttractiveFermions.md",
+"image" : "",
+"views":0
+},
+{
+"id": 7 ,
+"title": "Topological properties via density dependent hopping",
+"summary": "A novel model shows how interactions alone can induce topological phases in spinful fermions through density-dependent hopping.",
+"author": "",
+"date": "2025-07-28",
+"tags": ["", ""],
+"contentPath": "data/content/CorrelatedHoppingTopological.md",
+"image" : "data/img/schemeCorrelatedHoppingTopology.png",
+"hideImage": true,
+"views":0
+}
+  
+]

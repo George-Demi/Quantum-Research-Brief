@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Quantum Reaserch Brief </title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1><a href="index.html">Quantum Reaserch Brief </a></h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="articles.html">Articles</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </div>
+        <!--  Intro + Search -->
+    <section class="intro container">
+      <!-- <h2>Explore Quantum Realms, Algorithms, and the Science That Shapes Tomorrow</h2> -->
+      <!--<p>Dive into curated articles spanning beginner to advanced topics in quantum mechanics, computing, AI, and more.</p> -->
+      <form id="search-form">
+        <input type="text" id="search-input" placeholder="Search articles..." />
+        <button type="submit">🔍</button>
+      </form>
+    </section>
+  </header>
+
+  <main class="container">
+    <section class="contact">
+      <h2>Contact Us</h2>
+      <p>We’d love to hear from you! Whether you have questions, suggestions, or want to collaborate — reach out below.</p>
+
+      <form class="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="container">
+    <p>&copy; 2025 Quantum Reaserch Brief . All rights reserved.</p>
+  </footer>
+</body>
+</html>

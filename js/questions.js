@@ -23,5 +23,10 @@ const questions = [
     question: "What is the chemical symbol for gold?",
     options: ["Au", "Ag", "Pb", "Fe"],
     answer: "Au"
+  },
+  {
+    question: "What is the chemical symbol for Silver?",
+    options: ["Au", "Ag", "Pb", "Fe"],
+    answer: "Ag"
   }
 ];

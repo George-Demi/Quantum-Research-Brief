@@ -457,6 +457,81 @@ nav a {
   cursor: pointer;
 }
 
+
+#category-picker { display:flex; flex-wrap:wrap; gap:.5rem; margin-bottom: .75rem; }
+.category-btn { padding:.5rem .75rem; border:1px solid #ccc; border-radius:.5rem; cursor:pointer; }
+.category-btn.active { border-color: var(--primary); color: var(--primary); }
+
+.options { display:grid; gap:.5rem; margin-top:.75rem; }
+.option-btn { padding:.6rem .8rem; border:1px solid #ddd; border-radius:.5rem; cursor:pointer; }
+.option-btn:disabled { opacity:.6; cursor:not-allowed; }
+#next-btn { margin-top:.75rem; }
+
+#progress-bar { background: var(--primary); transition: width 200ms ease; }
+.feedback { min-height: 1.2em; margin-top:.5rem; }
+
+/* Container for post-quiz buttons */
+.post-quiz-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+/* General button style */
+.post-quiz-actions button {
+  background-color: var(--primary);
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+/* Hover effect */
+.post-quiz-actions button:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+/* Disabled look (if ever needed) */
+.post-quiz-actions button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Optional secondary style (for back button) */
+.post-quiz-actions button.secondary {
+  background-color: #f1f1f1;
+  color: var(--text-dark);
+}
+
+.post-quiz-actions button.secondary:hover {
+  background-color: #e0e0e0;
+}
+
+#category-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 320px;
+}
+.category-btn {
+  padding: 0.6rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  background-color: #f8f8f8;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.2s ease;
+}
+.category-btn:hover { background-color: #eaeaea; }
+.category-btn.active { border-color: var(--primary); color: var(--primary); }
+
 /* ====================================================
    mobile version
 ==================================================== */

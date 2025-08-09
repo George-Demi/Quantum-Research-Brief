@@ -32,15 +32,40 @@
   </div>
 </header>
 
-  <main class="container" id="trivia-game">
-    <h2>Trivia Game</h2>
-    <h3>Test your knowledge of quantum mechanics and computing!</h3>
+<!-- Trivia Page -->
+<main class="container">
+
+  <!-- Category selection view (shown first) -->
+  <section id="category-view" aria-label="Choose a category">
+    <h2>Choose a Category</h2>
+    <div id="category-picker"></div>
+  </section>
+
+  <!-- Quiz view (hidden until a category is picked) -->
+  <section id="quiz-view" style="display:none;" aria-live="polite">
+
+    <!-- Progress bar -->
+    <section id="progress" style="margin:12px 0">
+      <div id="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"
+           style="height:8px;background:#eee;border-radius:999px;overflow:hidden">
+        <div id="progress-bar" style="height:100%;width:0%"></div>
+      </div>
+      <div id="progress-text" style="font-size:.9rem;margin-top:.25rem;color:#555"></div>
+    </section>
+
+    <!-- Question + options -->
     <div id="question-container"></div>
-    <div id="options-container"></div>
-    <div id="feedback"></div>
+    <div id="options-container" class="options"></div>
+    <p id="feedback" class="feedback" aria-live="polite"></p>
     <button id="next-btn" style="display:none;">Next</button>
-    <div id="score-container" style="margin-top: 20px;"></div>
-  </main>
+  </section>
+
+  <!-- Score view (hidden until the quiz ends) -->
+  <section id="score-container" style="display:none;"></section>
+
+</main>
+
+
 
   <script src="js/questions.js"></script>
   <script src="js/trivia.js"></script>

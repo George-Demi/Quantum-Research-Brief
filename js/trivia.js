@@ -29,10 +29,10 @@ document.addEventListener("DOMContentLoaded", () => {
   function checkAnswer(selected) {
     const correct = questions[currentQuestionIndex].answer;
     if (selected === correct) {
-      feedback.textContent = "✅ Correct!";
+      feedback.textContent = "Correct!";
       score++;
     } else {
-      feedback.textContent = `❌ Wrong. Correct answer: ${correct}`;
+      feedback.textContent = `Wrong. Correct answer: ${correct}`;
     }
     nextBtn.style.display = "inline-block";
   }

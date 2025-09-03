@@ -447,83 +447,122 @@ nav a {
 }
 
 /* ====================================================
+   Trivia Game Styles
+==================================================== */
+.option-btn {
+  display: block;
+  margin: 8px 0;
+  padding: 10px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+
+#category-picker { display:flex; flex-wrap:wrap; gap:.5rem; margin-bottom: .75rem; }
+.category-btn { padding:.5rem .75rem; border:1px solid #ccc; border-radius:.5rem; cursor:pointer; }
+.category-btn.active { border-color: var(--primary); color: var(--primary); }
+
+.options { display:grid; gap:.5rem; margin-top:.75rem; }
+.option-btn { padding:.6rem .8rem; border:1px solid #ddd; border-radius:.5rem; cursor:pointer; }
+.option-btn:disabled { opacity:.6; cursor:not-allowed; }
+#next-btn { margin-top:.75rem; }
+
+#progress-bar { background: var(--primary); transition: width 200ms ease; }
+.feedback { min-height: 1.2em; margin-top:.5rem; }
+
+/* Container for post-quiz buttons */
+.post-quiz-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+/* General button style */
+.post-quiz-actions button {
+  background-color: var(--primary);
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+/* Hover effect */
+.post-quiz-actions button:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+/* Disabled look (if ever needed) */
+.post-quiz-actions button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Optional secondary style (for back button) */
+.post-quiz-actions button.secondary {
+  background-color: #f1f1f1;
+  color: var(--text-dark);
+}
+
+.post-quiz-actions button.secondary:hover {
+  background-color: #e0e0e0;
+}
+
+#category-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 320px;
+}
+.category-btn {
+  padding: 0.6rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  background-color: #f8f8f8;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.2s ease;
+}
+.category-btn:hover { background-color: #eaeaea; }
+.category-btn.active { border-color: var(--primary); color: var(--primary); }
+
+/* ====================================================
    mobile version
 ==================================================== */
 
 @media (max-width: 768px) {
-  /* ========== HEADER STRUCTURE ========== */
+  /* Adjust header container layout for mobile */
   .header-container {
     flex-direction: column;
+    align-items: flex-start;
     height: auto;
-    padding: 0.5rem 1rem 1rem; /* top | horizontal | bottom */
-    gap: 0.75rem;
-    align-items: stretch; /* changed from flex-start */
+    padding: 1rem;
+    gap: 1rem;
   }
 
-  /* ========== LOGO & TITLE ========== */
-  .site-logo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin-right: 0;
-  }
-
-  .site-logo img {
-    height: 50px; /* smaller logo for mobile */
-  }
-
-  #site-title {
-    font-size: 1.8rem;
-    padding-left: 0;
-    margin: 0.5rem 0;
-    line-height: 1.2;
-  }
-
-  /* ========== NAVIGATION MENU ========== */
+  /* Stack nav and search bar vertically */
   .nav-menu {
     flex-direction: column;
-    align-items: stretch; /* changed from flex-start */
-    gap: 0.5rem;
-    margin: 0;
-    padding: 0;
-    width: 100%;
+    align-items: flex-start;
+    gap: 0.75rem;
   }
 
-  .nav-menu a {
-    padding: 0.5rem 0;
-    border-bottom: 1px solid var(--border-color);
-    font-size: 0.95rem;
-  }
-
-  /* ========== SEARCH BAR ========== */
   .search-bar {
     flex-direction: column;
+    align-items: stretch;
     width: 100%;
     gap: 0.5rem;
-    margin: 0.5rem 0 0;
   }
 
   .search-bar input {
     min-width: 100%;
-    padding: 0.75rem;
-    font-size: 1rem;
   }
-
-  .search-bar button {
-    width: 100%;
-    padding: 0.75rem;
-  }
-
-  /* ========== UTILITY CLASSES ========== */
-  .mobile-hidden {
-    display: none !important;
-  }
-
-  .mobile-visible {
-    display: block !important;
-  }
-}
 
   .intro {
     position: static;
@@ -549,6 +588,12 @@ nav a {
     height: 100%;
   }
 
+  #site-title {
+    font-size: 2rem;
+    padding-left: 0;
+  }
+
   .container {
     padding: 1rem;
   }
+}

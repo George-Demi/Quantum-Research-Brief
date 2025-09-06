@@ -3,9 +3,10 @@
 "title": "",
 "summary": "",
 "author": "",
-"date": "2025-07-01",
+"date": "2025-09-01",
 "tags": ["", ""],
 "contentPath": "",
 "image" : "",
+"hideImage" : true false,
 "views":0
 }

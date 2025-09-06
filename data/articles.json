@@ -8,7 +8,7 @@
 "date": "2025-09-01",
 "tags": ["", ""],
 "contentPath": "data/content/Article1-092025.md",
-"image" : "data/img/1DClusterStateFigure.png",
+"image" : "data/img/Article1-img-2.png",
 "hideImage" : true, 
 "views":0
 }    ,
@@ -16,14 +16,39 @@
 {
 "id": 2 ,
 "title": "New Strategy for Controlling Majorana Zero Modes",
-"summary": "Blog Summary of Universal Quantum Control over Majorana Zero Modes.",
+"summary": "A universal control scheme enables fast, robust braiding of Majorana zero modes by using mediated interactions and global phase modulation to suppress errors.",
 "author": "NA",
 "date": "2025-09-02",
 "tags": ["", ""],
 "contentPath": "data/content/Article2-092025.md",
-"image" : "data/img/SchemeWithLD.png",
+"image" : "data/img/Article2-img-2.png",
  "hideImage" : true, 
 "views":0
+},
+{
+"id": 3,
+"title": "New strategy for controlling Majorana zero modes",
+"summary": "Floquet frequency modulation stabilizes Rydberg anti-blockade, enabling robust two-qubit gates and scalable quantum computation without individual addressing.",
+"author": "NA",
+"date": "2025-09-03",
+"tags": ["", ""],
+"contentPath": "data/content/Article3-092025.md",
+"image" : "data/img/Article3-img-2.png",
+"hideImage" : true,
+"views":0
+},
+{
+"id": 4 ,
+"title": "Sequential Quantum Computing: A New Paradigm which Divides and Conquers",
+"summary": "A new hybrid paradigm, Sequential Quantum Computing, combines quantum annealers and gate-based processors with counterdiabatic techniques to efficiently solve complex optimization problems.",
+"author": "NA",
+"date": "2025-09-01",
+"tags": ["", ""],
+"contentPath": "data/content/Article4-092025.md",
+"image" : "data/img/Article4-img-1.png",
+"hideImage" : true ,
+"views":0
 }
-  
+
+
 ]

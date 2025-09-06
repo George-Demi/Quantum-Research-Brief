@@ -27,7 +27,7 @@
 },
 {
 "id": 3,
-"title": "New strategy for controlling Majorana zero modes",
+"title": "Dancing with Rydberg Atoms: Floquet Modulation for Quantum Logic",
 "summary": "Floquet frequency modulation stabilizes Rydberg anti-blockade, enabling robust two-qubit gates and scalable quantum computation without individual addressing.",
 "author": "NA",
 "date": "2025-09-03",
@@ -42,7 +42,7 @@
 "title": "Sequential Quantum Computing: A New Paradigm which Divides and Conquers",
 "summary": "A new hybrid paradigm, Sequential Quantum Computing, combines quantum annealers and gate-based processors with counterdiabatic techniques to efficiently solve complex optimization problems.",
 "author": "NA",
-"date": "2025-09-01",
+"date": "2025-09-04",
 "tags": ["", ""],
 "contentPath": "data/content/Article4-092025.md",
 "image" : "data/img/Article4-img-1.png",

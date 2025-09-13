@@ -73,8 +73,33 @@
 "image" : "data/img/Article7-img-1.png",
 "hideImage" : true ,
 "views":0
+},
+
+
+
+
+{
+"id": 8 ,
+"title": "Quantum Physics for the General Audience series: Part 2",
+"summary": "A qubit is a quantum object with a binary property (like a baseball that can be red or blue) that can exist in both states simultaneously until observed, unlike classical bits which must be either 0 or 1.",
+"author": "NA",
+"date": "2025-09-11",
+"tags": ["", ""],
+"contentPath": "data/content/Article8-092025.md",
+"image" : "data/img/Article8-img.png",
+"hideImage" : false ,
+"views":0
+},
+{
+"id": 9 ,
+"title": "Stabilizing states and Clifford operations",
+"summary": "There is no fundamental relationship between topological order and quantum magic (computational complexity), as the apparent correlation depends on boundary conditions rather than inherent topological properties.",
+"author": "NA",
+"date": "2025-09-12",
+"tags": ["", ""],
+"contentPath": "data/content/Article9-092025.md",
+"image" : "data/img/Article9-plot.png",
+"hideImage" : true ,
+"views":0
 }
-
-
-
 ]

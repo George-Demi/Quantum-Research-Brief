@@ -33,11 +33,6 @@
   font-weight: 900;
 }
 
-.site-logo {
-  height: 300px;
-  width: auto;
-}
-
 /* ====================================================
    Universal Reset
 ==================================================== */
@@ -66,15 +61,20 @@ header {
   box-sizing: border-box;
 }
 
+/* FIXED: Consolidated and cleaned up logo styles */
 .site-logo {
   display: flex;
   align-items: center;
   margin-right: auto;
+  flex-shrink: 0; /* Prevent logo from shrinking */
+  height: 80px; /* Match header container height */
 }
 
 .site-logo img {
-  height: 80px;
+  height: 100%; /* Fill the container height */
+  width: auto; /* Maintain aspect ratio */
   object-fit: contain;
+  max-width: 200px; /* Prevent logo from being too wide */
 }
 
 /* ====================================================
@@ -573,6 +573,17 @@ nav a {
     gap: 1rem;
   }
 
+  /* FIXED: Mobile logo sizing */
+  .site-logo {
+    height: 60px; /* Slightly smaller on mobile */
+    align-self: center; /* Center the logo on mobile */
+    margin-bottom: 0.5rem;
+  }
+
+  .site-logo img {
+    max-width: 180px; /* Smaller max-width on mobile */
+  }
+
   /* Stack nav and search bar vertically */
   .nav-menu {
     flex-direction: column;
@@ -628,5 +639,23 @@ nav a {
 
   .container {
     padding: 1rem;
+  }
+}
+
+/* ====================================================
+   ADDITIONAL FIXES: Small screen logo adjustments
+==================================================== */
+
+@media (max-width: 480px) {
+  .site-logo {
+    height: 50px; /* Even smaller on very small screens */
+  }
+
+  .site-logo img {
+    max-width: 150px;
+  }
+
+  .header-container {
+    padding: 0.75rem;
   }
 }

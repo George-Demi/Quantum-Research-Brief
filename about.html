@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About | Quantum Reasearch Brief</title>
+  <title>About | Quantum Research Brief</title>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <header>
 <!-- ====== Header ====== -->
 <header>
   <div class="header-container container">
@@ -16,30 +15,64 @@
       <img src="data/img/Logo-QRB.png" alt="Quantum Research Brief Logo">
     </a>
 
-    <!-- Navigation center-left -->
+    <!-- Desktop Navigation center-left (visible on desktop) -->
     <nav class="nav-menu">
       <a href="index.html">Home</a>
       <a href="articles.html">Articles</a>
-      <a href="about.html">About</a>
+      <a href="about.html" class="active">About</a>
       <!--  <a href="contact.html">Contact</a> -->
     </nav>
 
-    <!-- Search bar far right -->
+    <!-- Desktop Search bar far right (visible on desktop) -->
     <form class="search-bar" action="articles.html" method="get">
       <input type="text" name="search" placeholder="Search articles..." />
       <button type="submit">Search</button>
     </form>
+
+    <!-- Hamburger Button (ONLY visible on mobile) -->
+    <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </div>
 </header>
 
+<!-- Mobile Navigation Overlay (only for mobile) -->
+<div class="nav-overlay" id="nav-overlay"></div>
+
+<!-- Mobile Navigation Menu (only for mobile) -->
+<nav class="nav-mobile" id="nav-mobile">
+  <div class="nav-mobile-header">
+    <div class="nav-mobile-title">Navigation</div>
+    <button class="nav-mobile-close" id="nav-close" aria-label="Close navigation menu">×</button>
+  </div>
+
+  <!-- Mobile Search -->
+  <div class="nav-mobile-search">
+    <form action="articles.html" method="get">
+      <input type="text" name="search" placeholder="Search articles...">
+      <button type="submit">Search</button>
+    </form>
+  </div>
+
+  <!-- Mobile Menu Links -->
+  <div class="nav-mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="articles.html">Articles</a>
+    <a href="about.html" class="active">About</a>
+    <!-- <a href="contact.html">Contact</a> -->
+  </div>
+</nav>
+
   <main class="container">
     <section class="about">
-      <h2>About Quantum Reasearch Brief</h2>
+      <h2>About Quantum Research Brief</h2>
       <p>
-        <strong>Quantum Reasearch Brief</strong> is a modern, dynamic platform that curates and publishes science and technology articles for learners at every level — from beginners just discovering quantum concepts to advanced readers diving into cutting-edge developments.
+        <strong>Quantum Research Brief</strong> is a modern, dynamic platform that curates and publishes science and technology articles for learners at every level – from beginners just discovering quantum concepts to advanced readers diving into cutting-edge developments.
       </p>
       <p>
-        We focus on topics across quantum mechanics, quantum computing, artificial intelligence, and foundational physics — aiming to make complex ideas approachable and inspiring. Our articles are written with clarity, rigor, and curiosity, and are tagged by difficulty so you can explore confidently at your own pace.
+        We focus on topics across quantum mechanics, quantum computing, artificial intelligence, and foundational physics – aiming to make complex ideas approachable and inspiring. Our articles are written with clarity, rigor, and curiosity, and are tagged by difficulty so you can explore confidently at your own pace.
       </p>
       <p>
         Whether you're a student, researcher, or curious mind, we welcome you to explore and deepen your understanding of the quantum world.
@@ -48,7 +81,73 @@
   </main>
 
   <footer class="container">
-    <p>&copy; 2025 Quantum Reasearch Brief. All rights reserved.</p>
+    <p>&copy; 2025 Quantum Research Brief. All rights reserved.</p>
   </footer>
+
+  <script>
+    // ====== MOBILE HAMBURGER MENU FUNCTIONALITY ======
+    document.addEventListener("DOMContentLoaded", () => {
+      // Only runs when hamburger elements exist (mobile view)
+      const hamburger = document.getElementById('hamburger-btn');
+      const navMobile = document.getElementById('nav-mobile');
+      const navOverlay = document.getElementById('nav-overlay');
+      const navClose = document.getElementById('nav-close');
+
+      // Only initialize hamburger menu if elements exist
+      if (hamburger && navMobile && navOverlay && navClose) {
+        
+        // Function to open mobile menu
+        function openMobileMenu() {
+          hamburger.classList.add('active');
+          navMobile.classList.add('active');
+          navOverlay.classList.add('active');
+          document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+
+        // Function to close mobile menu
+        function closeMobileMenu() {
+          hamburger.classList.remove('active');
+          navMobile.classList.remove('active');
+          navOverlay.classList.remove('active');
+          document.body.style.overflow = ''; // Restore scrolling
+        }
+
+        // Hamburger button click handler
+        hamburger.addEventListener('click', function() {
+          if (navMobile.classList.contains('active')) {
+            closeMobileMenu();
+          } else {
+            openMobileMenu();
+          }
+        });
+
+        // Close when clicking overlay
+        navOverlay.addEventListener('click', closeMobileMenu);
+
+        // Close when clicking close button
+        navClose.addEventListener('click', closeMobileMenu);
+
+        // Close when clicking any mobile menu link
+        const mobileLinks = document.querySelectorAll('.nav-mobile-menu a');
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', closeMobileMenu);
+        });
+
+        // Close menu when resizing from mobile to desktop
+        window.addEventListener('resize', function() {
+          if (window.innerWidth > 768) {
+            closeMobileMenu();
+          }
+        });
+
+        // Close menu when pressing Escape key
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && navMobile.classList.contains('active')) {
+            closeMobileMenu();
+          }
+        });
+      }
+    });
+  </script>
 </body>
 </html>

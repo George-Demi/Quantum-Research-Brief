@@ -13,7 +13,6 @@
   --border-color: #ddd;
   --shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   --font-main: 'Segoe UI', sans-serif;
-  /* --font-main: "League spartan", sans-serif ; */
 }
 
 /* ====================================================
@@ -61,24 +60,23 @@ header {
   box-sizing: border-box;
 }
 
-/* FIXED: Consolidated and cleaned up logo styles */
 .site-logo {
   display: flex;
   align-items: center;
   margin-right: auto;
-  flex-shrink: 0; /* Prevent logo from shrinking */
-  height: 80px; /* Match header container height */
+  flex-shrink: 0;
+  height: 80px;
 }
 
 .site-logo img {
-  height: 100%; /* Fill the container height */
-  width: auto; /* Maintain aspect ratio */
+  height: 100%;
+  width: auto;
   object-fit: contain;
-  max-width: 200px; /* Prevent logo from being too wide */
+  max-width: 200px;
 }
 
 /* ====================================================
-   Navigation Menu
+   Desktop Navigation Menu (Always visible on desktop)
 ==================================================== */
 .nav-menu {
   display: flex;
@@ -100,7 +98,7 @@ header {
 }
 
 /* ====================================================
-   Search Bar
+   Desktop Search Bar (Always visible on desktop)
 ==================================================== */
 .search-bar {
   display: flex;
@@ -122,6 +120,141 @@ header {
   border: none;
   border-radius: 6px;
   padding: 0.4rem 0.8rem;
+  cursor: pointer;
+}
+
+/* ====================================================
+   Hamburger Menu (Hidden by default - Mobile Only)
+==================================================== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  z-index: 1001;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #001163;
+  margin: 2px 0;
+  transition: 0.3s ease;
+  border-radius: 2px;
+}
+
+/* Hamburger Animation States */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Mobile Navigation Overlay (Hidden by default) */
+.nav-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.nav-overlay.active {
+  display: block;
+}
+
+/* Mobile Navigation Menu (Hidden by default) */
+.nav-mobile {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 280px;
+  height: 100%;
+  background: var(--white);
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: right 0.3s ease;
+  overflow-y: auto;
+}
+
+.nav-mobile.active {
+  right: 0;
+}
+
+.nav-mobile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.nav-mobile-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.nav-mobile-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  color: #666;
+}
+
+.nav-mobile-menu {
+  padding: 1rem 0;
+}
+
+.nav-mobile-menu a {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  color: #001163;
+  font-weight: 500;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.2s ease;
+}
+
+.nav-mobile-menu a:hover,
+.nav-mobile-menu a.active {
+  background-color: rgba(0, 17, 99, 0.05);
+}
+
+/* Mobile Search in Hamburger */
+.nav-mobile-search {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.nav-mobile-search input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+.nav-mobile-search button {
+  width: 100%;
+  padding: 0.5rem;
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
   cursor: pointer;
 }
 
@@ -337,21 +470,6 @@ nav a {
 }
 
 /* ====================================================
-   Responsive Design
-==================================================== */
-@media (max-width: 600px) {
-  nav a {
-    display: block;
-    margin: 0.5rem 0;
-  }
-
-  .controls {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-/* ====================================================
    Image Styles (Homepage + Articles)
 ==================================================== */
 .card img.card-image {
@@ -363,7 +481,7 @@ nav a {
 }
 
 /* ====================================================
-   FIXED: Articles Page Layout - Proper Flexbox Implementation
+   Articles Page Layout - Proper Flexbox Implementation
 ==================================================== */
 .articles-page .article-cards {
   display: flex;
@@ -377,8 +495,7 @@ nav a {
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
   overflow: hidden;
-  /* REMOVED: Fixed height that was causing issues */
-  min-height: 170px; /* Use min-height instead to allow expansion */
+  min-height: 170px;
 }
 
 .articles-page .article-card-inner {
@@ -386,16 +503,16 @@ nav a {
   flex-direction: row;
   gap: 1rem;
   padding: 1rem;
-  align-items: flex-start; /* Changed from stretch to flex-start */
-  min-height: 150px; /* Ensure minimum height for consistency */
+  align-items: flex-start;
+  min-height: 150px;
 }
 
 .articles-page .article-card-content {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* This will push "Read more" to bottom */
-  min-height: 100%; /* Ensure content takes full height */
+  justify-content: space-between;
+  min-height: 100%;
 }
 
 .articles-page .article-card-content h3 {
@@ -404,13 +521,13 @@ nav a {
 }
 
 .articles-page .article-card-content p {
-  flex-grow: 1; /* Allow summary to take available space */
+  flex-grow: 1;
   margin-bottom: 0.75rem;
   line-height: 1.5;
 }
 
 .articles-page .article-card-content .read-more {
-  margin-top: auto; /* Push to bottom */
+  margin-top: auto;
   align-self: flex-start;
   font-weight: 500;
   color: var(--primary);
@@ -418,7 +535,7 @@ nav a {
 
 .articles-page .article-card-image-wrapper {
   width: 180px;
-  height: 130px; /* Fixed height for image consistency */
+  height: 130px;
   flex-shrink: 0;
   overflow: hidden;
   border-radius: 6px;
@@ -454,16 +571,6 @@ nav a {
   clear: both;
 }
 
-/* Responsive image stack for smaller screens */
-@media (max-width: 768px) {
-  #article-image {
-    float: none;
-    display: block;
-    margin: 20px auto;
-    max-width: 100%;
-  }
-}
-
 /* ====================================================
    Utility Classes
 ==================================================== */
@@ -485,19 +592,57 @@ nav a {
   cursor: pointer;
 }
 
-#category-picker { display:flex; flex-wrap:wrap; gap:.5rem; margin-bottom: .75rem; }
-.category-btn { padding:.5rem .75rem; border:1px solid #ccc; border-radius:.5rem; cursor:pointer; }
-.category-btn.active { border-color: var(--primary); color: var(--primary); }
+#category-picker { 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: .5rem; 
+  margin-bottom: .75rem; 
+}
 
-.options { display:grid; gap:.5rem; margin-top:.75rem; }
-.option-btn { padding:.6rem .8rem; border:1px solid #ddd; border-radius:.5rem; cursor:pointer; }
-.option-btn:disabled { opacity:.6; cursor:not-allowed; }
-#next-btn { margin-top:.75rem; }
+.category-btn { 
+  padding: .5rem .75rem; 
+  border: 1px solid #ccc; 
+  border-radius: .5rem; 
+  cursor: pointer; 
+}
 
-#progress-bar { background: var(--primary); transition: width 200ms ease; }
-.feedback { min-height: 1.2em; margin-top:.5rem; }
+.category-btn.active { 
+  border-color: var(--primary); 
+  color: var(--primary); 
+}
 
-/* Container for post-quiz buttons */
+.options { 
+  display: grid; 
+  gap: .5rem; 
+  margin-top: .75rem; 
+}
+
+.option-btn { 
+  padding: .6rem .8rem; 
+  border: 1px solid #ddd; 
+  border-radius: .5rem; 
+  cursor: pointer; 
+}
+
+.option-btn:disabled { 
+  opacity: .6; 
+  cursor: not-allowed; 
+}
+
+#next-btn { 
+  margin-top: .75rem; 
+}
+
+#progress-bar { 
+  background: var(--primary); 
+  transition: width 200ms ease; 
+}
+
+.feedback { 
+  min-height: 1.2em; 
+  margin-top: .5rem; 
+}
+
 .post-quiz-actions {
   display: flex;
   gap: 0.75rem;
@@ -505,7 +650,6 @@ nav a {
   flex-wrap: wrap;
 }
 
-/* General button style */
 .post-quiz-actions button {
   background-color: var(--primary);
   color: #fff;
@@ -518,20 +662,17 @@ nav a {
   transition: background-color 0.2s ease, transform 0.15s ease;
 }
 
-/* Hover effect */
 .post-quiz-actions button:hover {
   background-color: var(--primary-hover);
   transform: translateY(-2px);
 }
 
-/* Disabled look (if ever needed) */
 .post-quiz-actions button:disabled {
   opacity: 0.6;
   cursor: not-allowed;
   transform: none;
 }
 
-/* Optional secondary style (for back button) */
 .post-quiz-actions button.secondary {
   background-color: #f1f1f1;
   color: var(--text-dark);
@@ -541,67 +682,39 @@ nav a {
   background-color: #e0e0e0;
 }
 
-#category-picker {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  max-width: 320px;
-}
-.category-btn {
-  padding: 0.6rem 1rem;
-  border: 1px solid #ccc;
-  border-radius: 0.5rem;
-  background-color: #f8f8f8;
-  cursor: pointer;
-  text-align: left;
-  transition: background-color 0.2s ease;
-}
-.category-btn:hover { background-color: #eaeaea; }
-.category-btn.active { border-color: var(--primary); color: var(--primary); }
-
 /* ====================================================
-   Mobile Responsive Design
+   MOBILE RESPONSIVE DESIGN (≤768px)
+   This is where hamburger menu becomes active
 ==================================================== */
 
 @media (max-width: 768px) {
-  /* Adjust header container layout for mobile */
+  /* Mobile header - logo on left, hamburger on right */
   .header-container {
-    flex-direction: column;
-    align-items: flex-start;
-    height: auto;
-    padding: 1rem;
-    gap: 1rem;
+    height: 70px;
+    padding: 0 1rem;
+    /* Keep flex layout: logo left, hamburger right */
   }
 
-  /* FIXED: Mobile logo sizing */
   .site-logo {
-    height: 60px; /* Slightly smaller on mobile */
-    align-self: center; /* Center the logo on mobile */
-    margin-bottom: 0.5rem;
+    height: 50px;
   }
 
   .site-logo img {
-    max-width: 180px; /* Smaller max-width on mobile */
+    max-width: 160px;
   }
 
-  /* Stack nav and search bar vertically */
-  .nav-menu {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.75rem;
-  }
-
+  /* HIDE desktop navigation and search on mobile */
+  .nav-menu,
   .search-bar {
-    flex-direction: column;
-    align-items: stretch;
-    width: 100%;
-    gap: 0.5rem;
+    display: none;
   }
 
-  .search-bar input {
-    min-width: 100%;
+  /* SHOW hamburger button on mobile */
+  .hamburger {
+    display: flex;
   }
 
+  /* Mobile content adjustments */
   .intro {
     position: static;
     width: 100%;
@@ -613,9 +726,8 @@ nav a {
     padding: 2rem 1rem;
   }
 
-  /* FIXED: Mobile articles layout */
   .articles-page .article-card {
-    min-height: auto; /* Allow natural height on mobile */
+    min-height: auto;
   }
 
   .articles-page .article-card-inner {
@@ -640,22 +752,56 @@ nav a {
   .container {
     padding: 1rem;
   }
+
+  /* Responsive image stack for smaller screens */
+  #article-image {
+    float: none;
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+  }
 }
 
 /* ====================================================
-   ADDITIONAL FIXES: Small screen logo adjustments
+   SMALL MOBILE RESPONSIVE (≤480px)
 ==================================================== */
 
 @media (max-width: 480px) {
+  .header-container {
+    padding: 0 0.75rem;
+  }
+
   .site-logo {
-    height: 50px; /* Even smaller on very small screens */
+    height: 45px;
   }
 
   .site-logo img {
-    max-width: 150px;
+    max-width: 140px;
   }
 
-  .header-container {
-    padding: 0.75rem;
+  .hamburger span {
+    width: 22px;
+  }
+
+  /* Smaller mobile navigation menu */
+  .nav-mobile {
+    width: 260px;
+    right: -260px;
+  }
+}
+
+/* ====================================================
+   RESPONSIVE DESIGN FOR TABLETS AND LARGER MOBILE
+==================================================== */
+
+@media (max-width: 600px) {
+  nav a {
+    display: block;
+    margin: 0.5rem 0;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }

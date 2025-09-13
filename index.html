@@ -15,7 +15,7 @@
       <img src="data/img/Logo-QRB.png" alt="Quantum Research Brief Logo">
     </a>
 
-    <!-- Navigation center-left -->
+    <!-- Desktop Navigation center-left (visible on desktop) -->
     <nav class="nav-menu">
       <a href="index.html" class="active">Home</a>
       <a href="articles.html">Articles</a>
@@ -23,25 +23,56 @@
       <!--  <a href="contact.html">Contact</a> -->
     </nav>
 
-    <!-- Search bar far right -->
+    <!-- Desktop Search bar far right (visible on desktop) -->
     <form class="search-bar" action="articles.html" method="get">
       <input type="text" name="search" placeholder="Search articles..." />
       <button type="submit">Search</button>
     </form>
+
+    <!-- Hamburger Button (ONLY visible on mobile) -->
+    <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </div>
 </header>
 
+<!-- Mobile Navigation Overlay (only for mobile) -->
+<div class="nav-overlay" id="nav-overlay"></div>
+
+<!-- Mobile Navigation Menu (only for mobile) -->
+<nav class="nav-mobile" id="nav-mobile">
+  <div class="nav-mobile-header">
+    <div class="nav-mobile-title">Navigation</div>
+    <button class="nav-mobile-close" id="nav-close" aria-label="Close navigation menu">×</button>
+  </div>
+
+  <!-- Mobile Search -->
+  <div class="nav-mobile-search">
+    <form action="articles.html" method="get">
+      <input type="text" name="search" placeholder="Search articles...">
+      <button type="submit">Search</button>
+    </form>
+  </div>
+
+  <!-- Mobile Menu Links (same as desktop) -->
+  <div class="nav-mobile-menu">
+    <a href="index.html" class="active">Home</a>
+    <a href="articles.html">Articles</a>
+    <a href="about.html">About</a>
+    <!-- <a href="contact.html">Contact</a> -->
+  </div>
+</nav>
 
   <!-- ====== Main Content ====== -->
   <main>
-    <section id= "mission" class="container">
+    <section id="mission" class="container">
       <h2>Our Mission</h2>
       <p>
-         <strong>  At Quantum Research Brief, we help you stay up to date with the latest advances in quantum research by providing concise 5–7 minute summaries of the most recent papers in the field.  </strong>
+         <strong>At Quantum Research Brief, we help you stay up to date with the latest advances in quantum research by providing concise 5–7 minute summaries of the most recent papers in the field.</strong>
       </p>
     </section>
-
-    
 
     <!--  Latest Articles -->
     <section class="featured-articles container">
@@ -54,7 +85,7 @@
 
   <!-- ====== Footer ====== -->
   <footer class="container">
-    <p>&copy; 2025 Quantum Reasearch Brief. All rights reserved.</p>
+    <p>&copy; 2025 Quantum Research Brief. All rights reserved.</p>
   </footer>
 
   <!-- ====== External Script ====== -->

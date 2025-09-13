@@ -706,12 +706,27 @@ nav a {
   /* HIDE desktop navigation and search on mobile */
   .nav-menu,
   .search-bar {
-    display: none;
+    display: none !important;
   }
 
-  /* SHOW hamburger button on mobile */
+  /* SHOW hamburger button and mobile navigation on mobile ONLY */
   .hamburger {
-    display: flex;
+    display: flex !important;
+  }
+
+  .nav-overlay.active,
+  .nav-mobile.active {
+    display: block !important;
+  }
+
+  .nav-mobile.active .nav-mobile-header,
+  .nav-mobile.active .nav-mobile-menu,
+  .nav-mobile.active .nav-mobile-search {
+    display: block !important;
+  }
+
+  .nav-mobile.active .nav-mobile-header {
+    display: flex !important;
   }
 
   /* Mobile content adjustments */

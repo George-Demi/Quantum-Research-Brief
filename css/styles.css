@@ -729,6 +729,22 @@ nav a {
     display: flex !important;
   }
 
+  /* FIXED: Mobile article content images */
+  #article-content img,
+  #article-content .centered-image {
+    max-width: 100% !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 1rem 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Ensure article content doesn't overflow */
+  #article-content {
+    overflow-x: hidden;
+    word-wrap: break-word;
+  }
+
   /* Mobile content adjustments */
   .intro {
     position: static;

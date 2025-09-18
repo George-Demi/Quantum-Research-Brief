@@ -101,5 +101,17 @@
 "image" : "data/img/Article9-plot.png",
 "hideImage" : true ,
 "views":0
+}, 
+{
+"id": 10 ,
+"title": "How Does RAM Work?",
+"summary": "Before talking about quantum RAMs, we first explore how classical RAMs work ,then we introduce quantum RAMs (qRAMs), which aim to store and retrieve quantum information efficiently while preserving superposition and entanglement.",
+"author": "NA",
+"date": "2025-09-17",
+"tags": ["", ""],
+"contentPath": "data/content/Article10-092025.md",
+"image" : "data/img/Article10-img-1(CF).png",
+"hideImage" : true ,
+"views":0
 }
 ]

@@ -105,7 +105,7 @@
 {
 "id": 10 ,
 "title": "How Does RAM Work?",
-"summary": "Before talking about quantum RAMs, we first explore how classical RAMs work ,then we introduce quantum RAMs (qRAMs), which aim to store and retrieve quantum information efficiently while preserving superposition and entanglement.",
+"summary": "Before talking about quantum RAMs, we first explore how classical RAMs work, using memory cells, gated latches, and multiplexers to store and access data at specific addresses.",
 "author": "NA",
 "date": "2025-09-17",
 "tags": ["", ""],

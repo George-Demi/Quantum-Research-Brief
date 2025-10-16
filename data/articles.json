@@ -75,9 +75,6 @@
 "views":0
 },
 
-
-
-
 {
 "id": 8 ,
 "title": "What is a Qubit?",
@@ -113,5 +110,18 @@
 "image" : "data/img/Article10-img-1(CF).png",
 "hideImage" : true ,
 "views":0
+},
+{
+"id": 11 ,
+"title": "How Does RAM Work?",
+"summary": "This article explains how quantum RAM (qRAM) extends classical RAM by allowing superpositions of memory addresses and introduces Giovannetti’s “bucket-brigade” protocol as a practical way to maintain coherence efficiently..",
+"author": "NA",
+"date": "2025-10-16",
+"tags": ["", ""],
+"contentPath": "data/content/Article11-102025.md",
+"image" : "data/img/Article11-img.png",
+"hideImage" : true ,
+"views":0
 }
+
 ]

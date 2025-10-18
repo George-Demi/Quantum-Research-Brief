@@ -113,7 +113,7 @@
 },
 {
 "id": 11 ,
-"title": "How Does QUantum RAM Work?",
+"title": "How Does Quantum RAM Work?",
 "summary": "This article explains how quantum RAM (qRAM) extends classical RAM by allowing superpositions of memory addresses and introduces Giovannetti’s “bucket-brigade” protocol as a practical way to maintain coherence efficiently..",
 "author": "NA",
 "date": "2025-10-16",
@@ -128,7 +128,7 @@
 "title": "Recent Developments in the Field of Quantum Communications: October 2025",
 "summary": "Researchers are advancing quantum communications through satellite, airborne, and fiber-based experiments, bringing the vision of a global quantum internet closer to reality.",
 "author": "NA",
-"date": "2025-10-16",
+"date": "2025-10-17",
 "tags": ["", ""],
 "contentPath": "data/content/Article12-102025.md",
 "image" : "data/img/Article12-img.png",

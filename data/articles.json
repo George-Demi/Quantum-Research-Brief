@@ -122,6 +122,18 @@
 "image" : "data/img/Article11-img.png",
 "hideImage" : true ,
 "views":0
+},
+{
+"id": 12 ,
+"title": "Recent Developments in the Field of Quantum Communications: October 2025",
+"summary": "Researchers are advancing quantum communications through satellite, airborne, and fiber-based experiments, bringing the vision of a global quantum internet closer to reality.",
+"author": "NA",
+"date": "2025-10-16",
+"tags": ["", ""],
+"contentPath": "data/content/Article12-102025.md",
+"image" : "data/img/Article12-img.png",
+"hideImage" : true ,
+"views":0
 }
 
 ]
